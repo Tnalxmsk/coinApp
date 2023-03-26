@@ -5,4 +5,6 @@
     <string name="introText">급등하면 배아프고\n내려가면 맘아프고</string>
     <string name="introNext">다음</string>
     <string name="introFind">우리도 \n알아보자</string>
+    <string name="selectCoin">요즘 어떤 코인에\n마음을 뺏겼나요?</string>
+    <string name="selectOk">선택 완료</string>
 </resources>

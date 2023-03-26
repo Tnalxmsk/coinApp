@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/introOneFragment"
-        android:name="com.example.cocoin.view.IntroOneFragment"
+        android:name="com.example.cocoin.view.intro.IntroOneFragment"
         android:label="fragment_intro_one"
         tools:layout="@layout/fragment_intro_one" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/introTwoFragment"
-        android:name="com.example.cocoin.view.IntroTwoFragment"
+        android:name="com.example.cocoin.view.intro.IntroTwoFragment"
         android:label="fragment_intro_two"
         tools:layout="@layout/fragment_intro_two" />
 </navigation>

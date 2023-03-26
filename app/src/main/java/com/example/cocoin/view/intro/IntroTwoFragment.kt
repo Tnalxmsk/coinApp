@@ -1,5 +1,6 @@
-package com.example.cocoin.view
+package com.example.cocoin.view.intro
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,7 +28,8 @@ class IntroTwoFragment : Fragment() {
     private fun initListener() {
         with(binding) {
             introTwoNextBt.setOnClickListener {
-
+                val intent = Intent(requireActivity(), IntroCoinSelectActivity::class.java)
+                startActivity(intent)
             }
         }
     }

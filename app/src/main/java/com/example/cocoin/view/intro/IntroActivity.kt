@@ -1,4 +1,4 @@
-package com.example.cocoin.view
+package com.example.cocoin.view.intro
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
