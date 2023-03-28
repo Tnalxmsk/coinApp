@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.cocoin.databinding.FragmentIntroTwoBinding
+import com.example.cocoin.view.select.IntroCoinSelectActivity
 
 class IntroTwoFragment : Fragment() {
     private var _binding: FragmentIntroTwoBinding? = null
