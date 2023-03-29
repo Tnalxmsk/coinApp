@@ -12,6 +12,7 @@ class IntroCoinSelectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityIntroCoinSelectBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        viewModel
+
+        viewModel.getCurrentCoinList()
     }
 }
