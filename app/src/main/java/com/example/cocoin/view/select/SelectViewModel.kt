@@ -1,5 +1,7 @@
 package com.example.cocoin.view.select
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cocoin.dataModel.CurrentPrice
@@ -15,6 +17,9 @@ class SelectViewModel : ViewModel() {
 
     private lateinit var currentPriceResultList: ArrayList<CurrentPriceResult>
 
+    private val _currentPriceResult = MutableLiveData<List<CurrentPriceResult>>()
+    val currentPriceResult: LiveData<List<CurrentPriceResult>>
+        get() = _currentPriceResult
     fun getCurrentCoinList() = viewModelScope.launch {
         val result = netWorkRepository.getCurrentCoinList()
 
@@ -33,5 +38,6 @@ class SelectViewModel : ViewModel() {
                 Timber.d(e.toString())
             }
         }
+        _currentPriceResult.value = currentPriceResultList
     }
 }
