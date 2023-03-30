@@ -7,4 +7,6 @@
     <string name="introFind">우리도 \n알아보자</string>
     <string name="selectCoin">요즘 어떤 코인에\n마음을 뺏겼나요?</string>
     <string name="selectOk">선택 완료</string>
+    <string name="coinname">coinName</string>
+    <string name="coinpriceupdown">coinPriceUpDown</string>
 </resources>
