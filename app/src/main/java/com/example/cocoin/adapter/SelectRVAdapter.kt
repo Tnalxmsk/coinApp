@@ -10,6 +10,13 @@ import com.example.cocoin.databinding.ItemIntroCoinBinding
 class SelectRVAdapter(val context: Context, private val coinPriceList: List<CurrentPriceResult>) : RecyclerView.Adapter<SelectRVAdapter.SelectViewHolder>() {
     inner class SelectViewHolder(private val binding: ItemIntroCoinBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(currentPriceResult: CurrentPriceResult) {
+            val fluctate_24H = coinPriceList[position].coinInfo.fluctate_24H
+            with(binding) {
+                itemCoinNameTv.text = coinPriceList[position].coinName
+                itemLikeBt
+            }
+            if (fluctate_24H.contains("-")) {
+            }
 
         }
     }
