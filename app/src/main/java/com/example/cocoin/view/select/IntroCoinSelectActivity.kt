@@ -1,11 +1,13 @@
 package com.example.cocoin.view.select
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cocoin.adapter.SelectRVAdapter
 import com.example.cocoin.databinding.ActivityIntroCoinSelectBinding
+import com.example.cocoin.view.MainActivity
 import timber.log.Timber
 
 class IntroCoinSelectActivity : AppCompatActivity() {
@@ -26,6 +28,10 @@ class IntroCoinSelectActivity : AppCompatActivity() {
                 selectCoinRv.layoutManager = LinearLayoutManager(this@IntroCoinSelectActivity)
 
                 Timber.d(it.toString())
+            }
+            selectCoinBt.setOnClickListener {
+                val intent = Intent(this@IntroCoinSelectActivity, MainActivity::class.java)
+                startActivity(intent)
             }
         }
     }

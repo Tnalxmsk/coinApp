@@ -49,15 +49,16 @@
         app:layout_constraintStart_toStartOf="parent" >
 
         <Button
+            android:id="@+id/select_coin_bt"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:background="@color/blue"
             android:gravity="center"
+            android:text="@string/selectOk"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="@string/selectOk" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
