@@ -3,6 +3,7 @@ package com.example.cocoin.view.intro
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.cocoin.databinding.ActivityIntroBinding
@@ -27,6 +28,7 @@ class IntroActivity : AppCompatActivity() {
                 }
                 else {
                     // 처음 접속 유저
+                    binding.fragmentContainerView.visibility = View.VISIBLE
                 }
             }
         }
