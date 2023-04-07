@@ -30,6 +30,7 @@ class IntroCoinSelectActivity : AppCompatActivity() {
                 Timber.d(it.toString())
             }
             viewModel.setUpFirstFlag()
+
             selectCoinBt.setOnClickListener {
                 val intent = Intent(this@IntroCoinSelectActivity, MainActivity::class.java)
                 startActivity(intent)

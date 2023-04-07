@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.Observer
 import com.example.cocoin.databinding.ActivityIntroBinding
 import com.example.cocoin.view.MainActivity
 
@@ -18,19 +19,17 @@ class IntroActivity : AppCompatActivity() {
         binding = ActivityIntroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        with(binding) {
-            viewModel.checkFirstFlag()
-            viewModel.first.observe(this@IntroActivity) {
-                if (it) {
-                    // 처음 접속 유저 x
-                    val intent = Intent(this@IntroActivity, MainActivity::class.java)
-                    startActivity(intent)
-                }
-                else {
-                    // 처음 접속 유저
-                    binding.fragmentContainerView.visibility = View.VISIBLE
-                }
+        viewModel.checkFirstFlag()
+        viewModel.first.observe(this, Observer {
+
+            if (it == true) {
+                // 처음 접속 유저 x
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                // 처음 접속 유저
+                binding.fragmentContainerView.visibility = View.VISIBLE
             }
-        }
+        })
     }
 }
